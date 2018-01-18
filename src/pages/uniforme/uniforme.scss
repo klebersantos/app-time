@@ -1,0 +1,12 @@
+page-uniforme {
+    .slide_img img {
+        width: 240px;
+    }
+    .content-md {
+        color: #fff;
+        .swiper-pagination-bullet-active {
+            background: #fff;
+            opacity: 1;
+        }
+    }
+}

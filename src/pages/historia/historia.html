@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>História</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card class="conteudo" *ngFor="let historia of historias">
+    <img src="{{ historia.fotos.guid }}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{historia.title.rendered}}
+      </ion-card-title>
+
+      <div [innerHTML]="historia.texto"></div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Uniforme</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-slides pager>
+    <ion-slide *ngFor="let uniforme of uniformes" class="slide_img">
+      <img src="{{uniforme.imagem.guid}}" alt="ica-slidebox-img-1">
+    </ion-slide>
+  </ion-slides>
+</ion-content>

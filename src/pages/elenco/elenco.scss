@@ -1,0 +1,11 @@
+page-elenco {
+    .content-md img {
+        height: auto;
+    }
+    .item-md ion-thumbnail {
+        min-width: 80px;
+        max-height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

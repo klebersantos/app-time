@@ -1,0 +1,70 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+h1.titulo_principal {
+    text-align:  center;
+    margin:  20px;
+    color: #b72d2d;
+}
+
+ion-card img {
+    height: auto;
+    width: auto;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+    width: 30px;
+}
+
+
+
+.toolbar-background-md {
+    border-color: #fff;
+    background: #b10d0d;
+}
+
+.toolbar-title-md {
+    color: #fff;
+}
+
+.content-md {
+    color: #000;
+    background: url(../assets/imgs/bg.png) center no-repeat;
+    background-size: cover; 
+    img {
+        border-radius: 3px; 
+    }
+    .swiper-pagination-bullet-active {
+        background: #1d1d1d;
+        opacity: 1;
+    }
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #af1c1c;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+    color: #af1c1c;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #fff;
+}

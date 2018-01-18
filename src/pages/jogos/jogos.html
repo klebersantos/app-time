@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Jogos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+    <ion-list>
+        <button ion-item *ngFor="let jogo of jogos" (click)="onShowJogosDetalhes(jogo);">
+          <div class="titulo-time">{{ jogo.title.rendered }}</div>
+          <div class="align-right"><small> <span [innerHTML]="jogo.hora"></span> - {{ jogo.data }}</small></div>
+        </button>  
+
+    </ion-list>
+
+
+
+</ion-content>
