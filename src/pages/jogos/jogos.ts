@@ -8,13 +8,22 @@ import { Refresher } from 'ionic-angular/components/refresher/refresher';
   selector: 'page-jogos',
   templateUrl: 'jogos.html',
 })
+
+
+
 export class JogosPage {
+
+  
+  jogosAbas: string = "anteriores";
+  
 
   jogos;
 
   public refresher;
   public isRefreshing: boolean = false;
   public loader;
+
+  
   
   carregarJogos() {
     this.jogosProvider.getJogos().subscribe( data => {
@@ -55,13 +64,13 @@ export class JogosPage {
 
   
   ionViewDidEnter() {
-    console.log('ionViewDidLoad JogosPage');
-    this.abreCarregando();
-    this.carregarJogos();
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JogosPage');
+    this.abreCarregando();
+    this.carregarJogos();
    
   }
 

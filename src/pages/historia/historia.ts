@@ -59,13 +59,12 @@ export class HistoriaPage {
   }
 
   ionViewDidEnter() {
-    console.log('ionViewDidLoad HistoriaPage');
-    this.abreCarregando();
-    this.carregarHistoria();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HistoriaPage');
+    this.abreCarregando();
+    this.carregarHistoria();
   }
 
 }

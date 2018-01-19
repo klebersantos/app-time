@@ -57,11 +57,14 @@ export class ElencoPage {
   }
 
   ionViewDidEnter() {
+    
+  }
+
+  ionViewDidLoad() {
     console.log('ionViewDidLoad ElencoPage');
     this.abreCarregando();
     this.carregarElenco();
   }
-
 
   onShowElencoDetalhes(elenco) {
     this.navCtrl.push('ElencoDetalhesPage', {elenco: elenco});

@@ -55,15 +55,15 @@ export class UniformePage {
   }
 
   ionViewDidEnter() {
-    console.log('ionViewDidLoad UniformePage');
-    this.abreCarregando();
-    this.carregarUniformes();
+  
   }
 
 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UniformePage');
+    this.abreCarregando();
+    this.carregarUniformes();
   }
 
 }

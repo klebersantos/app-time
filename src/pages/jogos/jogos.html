@@ -1,26 +1,48 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Jogos</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+    <ion-navbar>
+      <ion-title>
+          Jogos
+      </ion-title>
+    </ion-navbar>
+  
+    <ion-toolbar>
+      <ion-segment [(ngModel)]="jogosAbas">
+        <ion-segment-button value="anteriores">
+          Anteriores
+        </ion-segment-button>
+        <ion-segment-button value="proximos">
+          Próximos
+        </ion-segment-button>
+        
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
-      </ion-refresher>
+    </ion-refresher>
 
-    <ion-list>
-        <button ion-item *ngFor="let jogo of jogos" (click)="onShowJogosDetalhes(jogo);">
-          <div class="titulo-time">{{ jogo.title.rendered }}</div>
-          <div class="align-right"><small> <span [innerHTML]="jogo.hora"></span> - {{ jogo.data }}</small></div>
-        </button>  
+    <div [ngSwitch]="jogosAbas">
+      <ion-list *ngSwitchCase="'anteriores'">
+          <ion-list>
+              <button ion-item *ngFor="let jogo of jogos" (click)="onShowJogosDetalhes(jogo);">
+                <p class="modo">{{ jogo.modalidade }}</p>
+                <div class="titulo-time">{{ jogo.title.rendered }}</div>
+                <p class="align-right"><small> <span [innerHTML]="jogo.hora"></span> - {{ jogo.data }}</small></p>
+              </button>  
+          </ion-list>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'proximos'">
+          <ion-list>
+              <button ion-item *ngFor="let jogo of jogos" (click)="onShowJogosDetalhes(jogo);">
+                <p class="modo">{{ jogo.modalidade }}</p>
+                <div class="titulo-time">{{ jogo.title.rendered }}</div>
+                <p class="align-right"><small> <span [innerHTML]="jogo.hora"></span> - {{ jogo.data }}</small></p>
+              </button>  
+          </ion-list>
+      </ion-list>
+    </div>
+  </ion-content>
 
-    </ion-list>
-
-
-
-</ion-content>
